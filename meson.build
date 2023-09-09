@@ -4,7 +4,6 @@ project(
   default_options: ['cpp_std=c++1z']
 )
 
-
 fonts_files = files(
   'main.cpp',
   'src/args.cpp',
@@ -22,6 +21,7 @@ notes = executable(
     dependency('harfbuzz'),
     dependency('fontconfig'),
     dependency('cairo'),
+    dependency('xkbcommon'),
     ],
   include_directories: [
     include_directories('include'),
